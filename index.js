@@ -64,7 +64,7 @@ app.get('/profile', (req, res) => {
   const { token } = req.cookies;
   jwt.verify(token, secret, {}, (err, info) => {
     if (err) throw err;
-    // res.setHeader('Access-Control-Allow-Origin', 'https://65d1c70d1a487433b981a87e--cheerful-daffodil-239665.netlify.app');
+    res.setHeader('Access-Control-Allow-Origin', 'https://blogappfront-end.netlify.app');
     res.json(info);
   });
 });
